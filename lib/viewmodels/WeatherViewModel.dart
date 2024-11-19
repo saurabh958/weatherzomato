@@ -69,17 +69,10 @@ class WeatherViewModel extends ChangeNotifier {
         _customWeatherModel.rainAccumulation = finalModel.rainAccumulation?.toString() ?? "NA";
         print('custom weather data is ${_customWeatherModel.temperature}');
         notifyListeners();
-        /*setState(() {
-          _customWeatherModel.temperature;
-          _customWeatherModel.humidity;
-          _customWeatherModel.rainIntensity;
-          _customWeatherModel.windSpeed;
-        });*/
       }
     } else {
       _isApiFailure = true;
       notifyListeners();
-      //showInSnackBar("Api Failed!! Please Try Again Later");
     }
   }
 
