@@ -8,7 +8,6 @@ A Flutter-based weather app that utilizes the **WeatherUnion API** to provide re
 
 - **Real-Time Weather Updates**: Get accurate weather data based on your current location.
 - **Geolocation**: Automatically fetches weather details using GPS.
-- **City Lookup**: Search for weather updates of other cities.
 - **Responsive Design**: Optimized for all screen sizes.
 - **Offline Mode**: Basic functionality when the network is unavailable.
 
