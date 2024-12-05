@@ -48,7 +48,10 @@ class LocalityWeatherData {
       this.windSpeed, 
       this.windDirection, 
       this.rainIntensity, 
-      this.rainAccumulation,});
+      this.rainAccumulation,
+    this.aqi_pm_10,
+    this.aqi_pm_2_point_5,
+  });
 
   LocalityWeatherData.fromJson(dynamic json) {
     temperature = json['temperature'];
@@ -57,13 +60,17 @@ class LocalityWeatherData {
     windDirection = json['wind_direction'];
     rainIntensity = json['rain_intensity'];
     rainAccumulation = json['rain_accumulation'];
+    aqi_pm_10 = json['aqi_pm_10'];
+    aqi_pm_2_point_5 = json['aqi_pm_2_point_5'];
   }
   double? temperature;
   double? humidity;
   double? windSpeed;
-  double? windDirection;
+  int? windDirection;
   int? rainIntensity;
   int? rainAccumulation;
+  double? aqi_pm_10;
+  double? aqi_pm_2_point_5;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -73,6 +80,8 @@ class LocalityWeatherData {
     map['wind_direction'] = windDirection;
     map['rain_intensity'] = rainIntensity;
     map['rain_accumulation'] = rainAccumulation;
+    map['aqi_pm_10'] = aqi_pm_10;
+    map['aqi_pm_2_point_5'] = aqi_pm_2_point_5;
     return map;
   }
 

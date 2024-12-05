@@ -55,8 +55,8 @@ class WeatherViewModel extends ChangeNotifier {
     print(position.longitude);
     var localityString = getPlacemarks(position.latitude, position.longitude);
     print("locality is ${localityString.toString()}");
-    var data = weatherRepository.getDataForWeather("77.625825","12.933756");
-    //var data = weatherRepository.getDataForWeather(position.longitude.toString(),position.latitude.toString());
+    //var data = weatherRepository.getDataForWeather("77.625825","12.933756");
+    var data = weatherRepository.getDataForWeather(position.longitude.toString(),position.latitude.toString());
     model = await data;
     if(int.parse(model.status ?? "500") == 200) {
       var finalModel = model.localityWeatherData;
